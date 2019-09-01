@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <!-- Load the latest version of TensorFlow.js -->
+    <script src="https://unpkg.com/@tensorflow/tfjs"></script>
+    <script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
+  </head>
+  <body>
+
+    <div id="img-box">
+      <!-- Add an image that we will use to test -->
+      <img id="img" width=227 height=227/>
+      <div id="img-input-box">
+        <label id="img-input-label" for="img-input">Choose a picture</label>
+        <input type="file" id="img-input" name="img-input" accept="image/jpg" onchange="loadFile(event)">
+      </div>
+    </div>
+    <div id="analyze-and-result">
+
+      <button id="analyze">Analyze</button>
+      <div id="result"></div>
+      
+    </div>
+    <!-- Load index.js after the content of the page -->
+    <script src="index.js"></script>
+  </body>
+</html>
